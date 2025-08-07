@@ -1,0 +1,102 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CFD1CF"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/name_rating_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/hotel_image"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/tvHotelName"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="3"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Almas Hotel"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="5"
+                android:layout_marginEnd="@dimen/_20sdp"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="center_vertical"
+                android:progressTint="@color/yellow"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PKR 4500"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_rating_container"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvnight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 night"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            android:layout_marginTop="8dp" />
+        <Button
+            android:id="@+id/check_availability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Availability"
+            android:backgroundTint="#518EF8"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="@id/tvnight"
+            app:layout_constraintTop_toBottomOf="@id/tvnight"
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:id="@+id/hotel_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_hotels"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

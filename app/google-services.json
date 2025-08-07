@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "396681418144",
+    "project_id": "tour-and-travel-planner",
+    "storage_bucket": "tour-and-travel-planner.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396681418144:android:75ab58f1337a4773bb00c5",
+        "android_client_info": {
+          "package_name": "com.fmstudio.tourandtravelplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396681418144-l5kfe7hfvqov7vrr5t39r2caa9ki085o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fmstudio.tourandtravelplanner",
+            "certificate_hash": "b7f6c982db9ccfe66cfb0dafe69aace7aa268096"
+          }
+        },
+        {
+          "client_id": "396681418144-bj5phvs9c6fe7n6383e5c0gasds5tpre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_us1G665nvin8_plXU7kXte7IVYu02bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396681418144-bj5phvs9c6fe7n6383e5c0gasds5tpre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

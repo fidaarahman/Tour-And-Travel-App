@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_transport_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_bg_card"
+    android:padding="16dp"
+    android:layout_margin="8dp">
+
+    <!-- Text Section -->
+    <LinearLayout
+        android:id="@+id/ll_text_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ll_image_container"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_transport_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transport Name: Almas Transport"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location: Swat"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Pending"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Image Section -->
+    <LinearLayout
+        android:id="@+id/ll_image_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_transport"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_bus"
+            android:contentDescription="Transport Image"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- View Details Button -->
+    <TextView
+        android:id="@+id/btn_view_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Detail >"
+        android:textColor="#707070"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/ll_text_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

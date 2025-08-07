@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="136dp"
+    android:viewportWidth="360"
+    android:viewportHeight="136">
+
+  <group>
+    <!-- Shadow path (slightly offset and blurred in color) -->
+    <path
+        android:pathData="M10,2L350,2A10,10 0,0 1,360 12L360,128A10,10 0,0 1,350 138L10,138A10,10 0,0 1,0 128L0,12A10,10 0,0 1,10 2z"
+        android:fillColor="#33000000" /> <!-- semi-transparent black -->
+
+    <!-- Main background path -->
+    <path
+        android:pathData="M10,0.57L350,0.57A9.43,9.43 0,0 1,359.43 10L359.43,126A9.43,9.43 0,0 1,350 135.43L10,135.43A9.43,9.43 0,0 1,0.57 126L0.57,10A9.43,9.43 0,0 1,10 0.57z"
+        android:strokeWidth="1.13587"
+        android:fillColor="#C5C9C8"
+        android:strokeColor="#568792"/>
+  </group>
+</vector>

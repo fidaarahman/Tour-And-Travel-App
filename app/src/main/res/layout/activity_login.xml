@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".ui.common.LoginActivity">
+
+    <!-- Dim overlay -->
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scrollable Login Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/loginContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp"
+
+            android:gravity="center_horizontal">
+
+            <!-- Welcome Text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let’s go."
+                android:textSize="28sp"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plan your Dream Trip!"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Email Field -->
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_input"
+                android:hint="Email"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingStart="@dimen/_15sdp"
+                android:textColorHint="#aaaaaa"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Password Field -->
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_input"
+                android:hint="Password"
+                android:paddingStart="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColorHint="#aaaaaa"
+                android:inputType="textPassword"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp" />
+
+
+
+            <!-- Login Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Log in"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:backgroundTint="#518EF8"
+                app:cornerRadius="24dp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Forgot Password -->
+            <TextView
+                android:id="@+id/txtForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginEnd="@dimen/_19sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="end"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- OR Divider -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Google Sign-In Button -->
+            <LinearLayout
+                android:id="@+id/btnGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/goagle_button_background"
+                android:paddingStart="16dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/googleIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_goagle"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:contentDescription="Google Icon"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/googleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign in with Google"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular" />
+            </LinearLayout>
+
+            <!-- Sign Up Prompt -->
+            <TextView
+                android:id="@+id/txtCreateAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? Create one"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

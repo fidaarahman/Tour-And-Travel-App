@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:padding="0dp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+           >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="16dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <!-- Back Button -->
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="Back"
+                    android:padding="6dp" />
+
+                <!-- Hotel Title -->
+                <TextView
+                    android:id="@+id/tvHotelName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Almas Hotel"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            <!-- Hotel Images -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerHotelImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+            <!-- About this property -->
+            <TextView
+                android:id="@+id/tvAboutProperty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About this property"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#000"
+                android:layout_marginTop="16dp" />
+
+            <!-- Description text -->
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textIsSelectable="false"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="8dp"
+                android:text="Comfortable Accommodations: Almas Hotel Fizaghat Mingora Swat in Madyan offers family rooms...\n\nDining Experience: The family-friendly restaurant serves halal meals...\n\nLeisure Facilities: The hotel features a terrace, waterpark...\n\nLocation and Access: Located 170 km from Bacha Khan International Airport..." />
+
+            <!-- Date & Guest Container -->
+            <LinearLayout
+                android:id="@+id/dateGuestContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp">
+
+                <!-- Calendar Part -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_calander" />
+
+                    <TextView
+                        android:id="@+id/tvDates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wed 9 Jul - Thu 10 Jul"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="#000"
+                        android:layout_marginStart="8dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="#4F868E" />
+
+                <!-- Guest Part -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_person" />
+
+                    <TextView
+                        android:id="@+id/tvGuests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 adults . 1 room"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Room Type Spinner -->
+            <Spinner
+                android:id="@+id/spinnerRoomType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:padding="12dp"
+                android:layout_marginTop="12dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="I will Reserve"
+                android:textSize="14sp"
+                app:cornerRadius="12dp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:backgroundTint="#518EF8"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bookingFragmentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    tools:context=".ui.user.fragments.BookingFragment">
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textSize="18sp"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City:"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvCheckIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check-in:"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvCheckOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check-out:"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvRooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rooms:"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvAdults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adults:"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvChildren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Children:"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvBabies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Babies:"
+                android:paddingBottom="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

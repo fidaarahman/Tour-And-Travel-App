@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="12dp"
+	android:background="@android:color/white">
+
+	<TextView android:id="@+id/txtRoomNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Room No" />
+	<TextView android:id="@+id/txtBeds" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Beds" />
+	<TextView android:id="@+id/txtWashroom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Washroom" />
+	<TextView android:id="@+id/txtStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<Button android:id="@+id/btnApprove" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Approve" />
+		<Button android:id="@+id/btnAddRoom" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Add Room" />
+	</LinearLayout>
+
+</LinearLayout>
